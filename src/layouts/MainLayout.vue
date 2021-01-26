@@ -2,7 +2,7 @@
   <div class="app-main-layout">
     <NavBar @click="isOpen = !isOpen" />
     <SideBar v-model="isOpen" />
-
+    Test ci/cd
     <main class="app-content" :class="{ full: !isOpen }">
       <div class="app-page">
         <router-view />
