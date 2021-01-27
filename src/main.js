@@ -4,7 +4,12 @@ import './registerServiceWorker';
 import router from './router';
 import store from './store';
 
+// filters
+import dateFilter from "@/filters/date.filter";
+
 import 'materialize-css/dist/js/materialize.min';
+
+Vue.filter('date', dateFilter);
 
 Vue.config.productionTip = false;
 
