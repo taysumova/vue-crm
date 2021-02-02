@@ -33,6 +33,16 @@ export default {
     isOpen: true
   }),
 
+  mounted() {
+    this.getInfo();
+  },
 
+  methods: {
+    async getInfo() {
+      if (!Object.keys(this.$store.getters.info).length) {
+        await this.$store.dispatch('fetchInfo');
+      }
+    }
+  }
 };
 </script>
